@@ -12,8 +12,6 @@ export default function TemplateIngredient({ children, frontMatter }) {
 
   const { title } = ingredientFrontmatter;
 
-  console.log('ingredientFrontmatter', ingredientFrontmatter)
-
   return (
     <Layout frontMatter={ingredientFrontmatter}>
       <Section>

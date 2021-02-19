@@ -10,7 +10,7 @@ import Card from '@components/Card';
 
 import styles from '../styles/Home.module.scss'
 
-import recipesBanner from '@images/applitools-recipes-banner.jpg';
+import recipesBanner from '@images/applitools-recipes-banner.png';
 
 export default function Home({ ingredients }) {
   return (
