@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
 
 import { getIngredients } from '@lib/ingredients';
 
@@ -24,7 +22,7 @@ export default function Home({ ingredients }) {
 
       <Section className={styles.heroSection}>
         <Container className={styles.heroContainer}>
-          <Image src={recipesBanner} width={632} height={324} />
+          <img src={recipesBanner} width={632} height={324} alt="Chefs with code ingredients" />
           <h1 className={styles.title}>The Kitchen</h1>
           <p className={styles.description}>
             A pantry full of web components that can be used for testing.
