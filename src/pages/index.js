@@ -1,64 +1,58 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import Container from '../components/Container';
-import Main from '../components/Main';
-import Footer from '../components/Footer';
-import Grid from '../components/Grid';
-import Card from '../components/Card';
+import { getIngredients } from '@lib/ingredients';
+
+import Section from '@components/Section';
+import Container from '@components/Container';
+import Layout from '@components/Layout';
+import Grid from '@components/Grid';
+import Card from '@components/Card';
 
 import styles from '../styles/Home.module.scss'
 
-export default function Home() {
+import recipesBanner from '@images/applitools-recipes-banner.jpg';
+
+export default function Home({ ingredients }) {
   return (
-    <Container>
+    <Layout displayNav={false}>
       <Head>
-        <title>Create Next App</title>
+        <title>The Kitchen</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Main>
-        <h1 className={styles.title}>
-          <a href="https://nextjs.org">Next.js</a> Sass Starter
-        </h1>
+      <Section className={styles.heroSection}>
+        <Container className={styles.heroContainer}>
+          <Image src={recipesBanner} width={632} height={324} />
+          <h1 className={styles.title}>The Kitchen</h1>
+          <p className={styles.description}>
+            A pantry full of web components that can be used for testing.
+          </p>
+        </Container>
+      </Section>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+      <Container>
 
-        <Grid>
-          <Card>
-            <a href="https://nextjs.org/docs">
-              <h3>Documentation &rarr;</h3>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-          </Card>
-
-          <Card>
-            <a href="https://nextjs.org/learn">
-              <h3>Learn &rarr;</h3>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
-          </Card>
-
-          <Card>
-            <a href="https://github.com/vercel/next.js/tree/master/examples">
-              <h3>Examples &rarr;</h3>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-          </Card>
-
-          <Card>
-            <a
-              href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            >
-              <h3>Deploy &rarr;</h3>
-              <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-            </a>
-          </Card>
+        <Grid className={styles.homeGrid}>
+          {ingredients.map(({ id, title, path }) => {
+            return (
+              <Card href={path} key={id}>
+                <h3>{ title }</h3>
+              </Card>
+            );
+          })}
         </Grid>
-      </Main>
-
-      <Footer />
-    </Container>
+      </Container>
+    </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const ingredients = await getIngredients();
+  return {
+    props: {
+      ingredients
+    },
+  }
 }

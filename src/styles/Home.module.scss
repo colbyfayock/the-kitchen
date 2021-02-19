@@ -1,24 +1,22 @@
 @import "./settings/__settings";
 
-.title {
+.heroSection {
+  margin-top: 0;
+}
 
-  margin: 0;
+.heroContainer {
+  text-align: center;
+}
+
+.heroImage {
+  margin-bottom: 1em;
+}
+
+.title {
+  color: $color-primary;
   line-height: 1.15;
   font-size: 4rem;
-
-  a {
-
-    color: $color-primary;
-    text-decoration: none;
-
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: underline;
-    }
-
-  }
-
+  margin: .5em 0 0;
 }
 
 .title,
@@ -29,4 +27,9 @@
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.homeGrid {
+  margin-right: auto;
+  margin-left: auto;
 }

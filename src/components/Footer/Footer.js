@@ -1,16 +1,19 @@
+import Section from '@components/Section';
+import Container from '@components/Container';
+import Applitools from '@components/Applitools';
+
 import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by{' '}
-        <img src="/vercel.svg" alt="Vercel Logo" className={styles.footerLogo} />
-      </a>
+      <Section className={styles.footerSection}>
+        <Container className={styles.footerContainer}>
+          <a href="https://www.applitools.com" target="_blank" rel="noopener noreferrer">
+            Powered by <Applitools className={styles.footerLogo} />
+          </a>
+        </Container>
+      </Section>
     </footer>
   )
 }

@@ -1,0 +1,59 @@
+---
+title: Select
+layout: ingredient
+---
+
+import Form from '@components/Form';
+import FormRow from '@components/FormRow';
+import Select from '@ingredients/Select';
+
+<Form>
+
+<FormRow>
+
+<Select id="spices-default" name="spices-default" label="Spices" options={[
+  {
+    value: 'chili-powder',
+    label: 'Chili Powder'
+  },
+  {
+    value: 'garlic',
+    label: 'Garlic'
+  },
+  {
+    value: 'ginger',
+    label: 'Ginger'
+  },
+  {
+    value: 'paprika',
+    label: 'Paprika'
+  }
+]} />
+
+</FormRow>
+
+<FormRow>
+
+<Select id="spices-selected" name="spices-selected" label="Spices with Selected" options={[
+  {
+    value: 'chili-powder',
+    label: 'Chili Powder'
+  },
+  {
+    value: 'garlic',
+    label: 'Garlic'
+  },
+  {
+    value: 'ginger',
+    label: 'Ginger',
+    selected: true
+  },
+  {
+    value: 'paprika',
+    label: 'Paprika'
+  }
+]} />
+
+</FormRow>
+
+</Form>
