@@ -25,7 +25,7 @@ export default function Home({ ingredients }) {
           <img src={recipesBanner} width={632} height={324} alt="Chefs with code ingredients" />
           <h1 className={styles.title}>The Kitchen</h1>
           <p className={styles.description}>
-            A pantry full of web components that can be used for testing.
+            A pantry full of web components that can be used for automated testing.
           </p>
         </Container>
       </Section>
