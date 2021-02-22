@@ -25,8 +25,9 @@ const Head = ({ children, title, ...rest }) => {
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1012" />
-      <meta property="og:image:height" content="506" />
+      <meta property="og:image:secure_url" content={ogImage} />
+      <meta property="og:image:width" content="2024" />
+      <meta property="og:image:height" content="1012" />
       <meta property="og:image:alt" content={siteName} />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:image" content={ogImage} />
