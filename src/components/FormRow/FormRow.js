@@ -1,3 +1,5 @@
+import { FormControl } from "@chakra-ui/react"
+
 import styles from './FormRow.module.scss';
 
 const FormRow = ({ children, className, ...rest }) => {
@@ -8,9 +10,9 @@ const FormRow = ({ children, className, ...rest }) => {
   }
 
   return (
-    <div className={formRowClassName} {...rest}>
+    <FormControl className={formRowClassName} {...rest}>
       { children }
-    </div>
+    </FormControl>
   )
 }
 

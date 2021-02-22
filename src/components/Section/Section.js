@@ -1,3 +1,5 @@
+import { Box } from '@chakra-ui/react'
+
 import styles from './Section.module.scss';
 
 const Section = ({ children, className, backgroundColor, ...rest }) => {
@@ -8,9 +10,9 @@ const Section = ({ children, className, backgroundColor, ...rest }) => {
   }
 
   return (
-    <section className={sectionClassName} data-background-color={backgroundColor} {...rest}>
+    <Box as="section" className={sectionClassName} data-background-color={backgroundColor} {...rest}>
       { children }
-    </section>
+    </Box>
   )
 }
 

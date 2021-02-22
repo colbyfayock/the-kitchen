@@ -1,8 +1,7 @@
+import { Container, Heading } from '@chakra-ui/react';
+
 import Layout from '@components/Layout';
 import Section from '@components/Section';
-import Container from '@components/Container';
-
-import styles from '@styles/templates/Ingredient.module.scss';
 
 export default function TemplateIngredient({ children, frontMatter }) {
   const ingredientFrontmatter = {
@@ -15,8 +14,8 @@ export default function TemplateIngredient({ children, frontMatter }) {
   return (
     <Layout frontMatter={ingredientFrontmatter}>
       <Section>
-        <Container>
-          <h1>{ title }</h1>
+        <Container maxW="4xl">
+          <Heading as="h1" mb=".8em">{ title }</Heading>
           { children }
         </Container>
       </Section>

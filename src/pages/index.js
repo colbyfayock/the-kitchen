@@ -1,14 +1,11 @@
 import Head from 'next/head';
+import { Container, Grid, Heading, Text, Image } from '@chakra-ui/react';
 
 import { getIngredients } from '@lib/ingredients';
 
 import Section from '@components/Section';
-import Container from '@components/Container';
 import Layout from '@components/Layout';
-import Grid from '@components/Grid';
 import Card from '@components/Card';
-
-import styles from '../styles/Home.module.scss'
 
 import recipesBanner from '@images/applitools-recipes-banner.png';
 
@@ -20,28 +17,25 @@ export default function Home({ ingredients }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Section className={styles.heroSection}>
-        <Container className={styles.heroContainer}>
-          <img src={recipesBanner} width={632} height={324} alt="Chefs with code ingredients" />
-          <h1 className={styles.title}>The Kitchen</h1>
-          <p className={styles.description}>
+      <Section>
+        <Container maxW="4xl" textAlign="center">
+          <Image mx="auto" mt="1em" src={recipesBanner} width={550} height="auto" alt="Chefs with code ingredients" />
+          <Heading as="h1" fontSize="5xl" mt="1em" mb=".5em" color="primary.500">The Kitchen</Heading>
+          <Text fontSize="2xl">
             A pantry full of web components that can be used for automated testing.
-          </p>
+          </Text>
+
+          <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]} gap={1} mt="3em">
+            {ingredients.map(({ id, title, path }) => {
+              return (
+                <Card href={path} key={id}>
+                  <Heading as="h3">{ title }</Heading>
+                </Card>
+              );
+            })}
+          </Grid>
         </Container>
       </Section>
-
-      <Container>
-
-        <Grid className={styles.homeGrid}>
-          {ingredients.map(({ id, title, path }) => {
-            return (
-              <Card href={path} key={id}>
-                <h3>{ title }</h3>
-              </Card>
-            );
-          })}
-        </Grid>
-      </Container>
     </Layout>
   )
 }

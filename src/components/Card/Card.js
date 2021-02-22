@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 
 import styles from './Card.module.scss';
@@ -20,9 +21,9 @@ const Card = ({ children, className, href, ...rest }) => {
   }
 
   return (
-    <div {...rest} className={cardClassName} >
+    <Box {...rest} className={cardClassName} >
       { children }
-    </div>
+    </Box>
   )
 }
 

@@ -2,6 +2,21 @@
 
 .select {
 
+ select {
+
+  &[multiple] {
+    
+    height: auto;
+    padding: 1em;
+
+    & + div {
+      display: none;
+    }
+
+  }
+
+ }
+
   label {
     display: block;
     font-weight: bold;

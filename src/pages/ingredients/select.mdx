@@ -3,15 +3,18 @@ title: Select
 layout: ingredient
 ---
 
+import { FormLabel } from "@chakra-ui/react"
 import Form from '@components/Form';
 import FormRow from '@components/FormRow';
 import Select from '@ingredients/Select';
 
 <Form>
 
-<FormRow>
+<FormRow id="spices-select-single">
 
-<Select id="spices-select-single" name="spices-select-single" label="Single Select" options={[
+<FormLabel>Single Select</FormLabel>
+
+<Select name="spices-select-single" options={[
   {
     value: 'chili-powder',
     label: 'Chili Powder'
@@ -32,9 +35,11 @@ import Select from '@ingredients/Select';
 
 </FormRow>
 
-<FormRow>
+<FormRow id="spices-select-multi">
 
-<Select id="spices-select-multi" name="spices-select-multi" label="Multi Select" options={[
+<FormLabel>Multi Select</FormLabel>
+
+<Select name="spices-select-multi" options={[
   {
     value: 'chili-powder',
     label: 'Chili Powder'

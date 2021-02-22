@@ -1,20 +1,6 @@
-.footer {
+.footerText {
 
-  background-color: #f6f9f9;
-
-
-}
-
-.footerSection {
-  margin: 0;
-}
-
-.footerContainer {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  &,
   a {
     display: flex;
     justify-content: center;
