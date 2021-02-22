@@ -15,7 +15,7 @@ export default function TemplateIngredient({ children, frontMatter }) {
     <Layout frontMatter={ingredientFrontmatter}>
       <Section>
         <Container maxW="4xl">
-          <Heading as="h1" mb=".8em">{ title }</Heading>
+          <Heading as="h1" mb=".8em" fontSize="5xl" variant="display" color="primary.500">{ title }</Heading>
           { children }
         </Container>
       </Section>

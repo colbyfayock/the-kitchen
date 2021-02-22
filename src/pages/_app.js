@@ -6,8 +6,30 @@ const theme = extendTheme({
   colors: {
     primary: {
       500: "#00A298"
-    }
+    },
   },
+  components: {
+    Heading: {
+      variants: {
+        display: {
+          fontFamily: 'Abril Fatface'
+        }
+      }
+    },
+    Text: {
+      variants: {
+        display: {
+          fontFamily: 'Abril Fatface'
+        }
+      }
+    },
+    FormLabel: {
+      baseStyle: {
+        color: 'gray.800',
+        fontWeight: 'bold'
+      }
+    }
+  }
 })
 
 function MyApp({ Component, pageProps }) {

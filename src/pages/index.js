@@ -20,7 +20,11 @@ export default function Home({ ingredients }) {
       <Section>
         <Container maxW="4xl" textAlign="center">
           <Image mx="auto" mt="1em" src={recipesBanner} width={550} height="auto" alt="Chefs with code ingredients" />
-          <Heading as="h1" fontSize="5xl" mt="1em" mb=".5em" color="primary.500">The Kitchen</Heading>
+          
+          <Heading as="h1" fontSize="6xl" mt="1em" mb=".5em" color="primary.500" variant="display">
+            The Kitchen
+          </Heading>
+
           <Text fontSize="2xl">
             A pantry full of web components that can be used for automated testing.
           </Text>

@@ -10,14 +10,14 @@ const Nav = () => {
       <Section m="0">
         <Container maxW="4xl">
           <Flex w="100%" justifyContent="space-between" alignItems="center">
-            <Text color="primary.500" fontWeight="bold" fontSize="2xl">
+            <Text color="gray.500" fontWeight="bold" fontSize="2xl" variant="display">
               <Link href="/">
                 <a>
                   The Kitchen
                 </a>
               </Link>
             </Text>
-            <Text fontSize="2xl">
+            <Text color="gray.600" fontSize="2xl">
               <a href="https://github.com/colbyfayock/the-kitchen">
                 <FaGithub />
               </a>
