@@ -1,7 +1,7 @@
 {
   "name": "next-sass-starter",
-  "title": "Next.js Sass Starter",
-  "description": "Use Sass to start your Next.js app with CSS superpowers!",
+  "title": "The Kitchen",
+  "description": "A pantry full of web components that can be used for automated testing.",
   "version": "0.1.0",
   "author": {
     "name": "Colby Fayock",
@@ -36,12 +36,12 @@
     "build": "next build && next export",
     "start": "next start"
   },
-  "homepage": "https://next-sass-starter.vercel.app",
+  "homepage": "https://the-kitchen-applitools.netlify.app/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/next-sass-starter"
+    "url": "https://github.com/colbyfayock/the-kitchen"
   },
   "bugs": {
-    "url": "https://github.com/colbyfayock/next-sass-starter/issues"
+    "url": "https://github.com/colbyfayock/the-kitchen/issues"
   }
 }

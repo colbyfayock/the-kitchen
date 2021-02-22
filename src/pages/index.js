@@ -1,8 +1,8 @@
-import Head from 'next/head';
 import { Container, Grid, Heading, Text, Image } from '@chakra-ui/react';
 
 import { getIngredients } from '@lib/ingredients';
 
+import Head from '@components/Head';
 import Section from '@components/Section';
 import Layout from '@components/Layout';
 import Card from '@components/Card';
@@ -12,11 +12,6 @@ import recipesBanner from '@images/applitools-recipes-banner.png';
 export default function Home({ ingredients }) {
   return (
     <Layout displayNav={false}>
-      <Head>
-        <title>The Kitchen</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Section>
         <Container maxW="4xl" textAlign="center">
           <Image mx="auto" mt="1em" src={recipesBanner} width={550} height="auto" alt="Chefs with code ingredients" />
