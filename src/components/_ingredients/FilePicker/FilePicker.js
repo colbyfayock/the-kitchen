@@ -3,7 +3,7 @@ import { Input as ChakraInput } from '@chakra-ui/react';
 
 import styles from './FilePicker.module.scss';
 
-const FilePicker = ({ id, name, label, options, ...rest }) => {
+const FilePicker = ({ id, name, label, options, accept, ...rest }) => {
 
   const [imageSrc, setImageSrc] = useState();
 
@@ -21,11 +21,14 @@ const FilePicker = ({ id, name, label, options, ...rest }) => {
 
   return (
     <div className={`ingredient ${styles.filePicker}`}>
-      <ChakraInput type="file" name="photo-upload" {...rest} onChange={handleOnChange}  />
+      <ChakraInput type="file" name="photo-upload" accept={accept} {...rest} onChange={handleOnChange}  />
+      <p className={styles.filePickerAccepted}>
+        Accepted files: { accept }
+      </p>
       {imageSrc && (
         <figure className={styles.filePickerPreview}>
-            <img src={imageSrc} alt="Preview of uploaded file" />
-            <figcaption>Upload Preview</figcaption>
+          <img src={imageSrc} alt="Preview of uploaded file" />
+          <figcaption>Upload Preview</figcaption>
         </figure>
       )}
     </div>
