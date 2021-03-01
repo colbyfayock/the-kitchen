@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { Button } from "@chakra-ui/react"
 
-import Form from '@components/Form';
-import FormRow from '@components/FormRow';
-
 import styles from './Alert.module.scss';
 
 const Alert = ({ id, method = 'alert', message, label }) => {
@@ -25,7 +22,7 @@ const Alert = ({ id, method = 'alert', message, label }) => {
   }
 
   return (
-    <FormRow>
+    <div id={id} className={styles.alert}>
       <p id={`${id}-button`}>
         <Button colorScheme="blue" onClick={handleOnClick}>
           { label }
@@ -39,7 +36,7 @@ const Alert = ({ id, method = 'alert', message, label }) => {
           Answer: { answer }
         </p>
       )}
-    </FormRow>
+    </div>
   )
 }
 
