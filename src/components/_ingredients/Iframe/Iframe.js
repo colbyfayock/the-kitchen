@@ -1,4 +1,4 @@
-import styles from './iFrame.module.scss';
+import styles from './Iframe.module.scss';
 
 const iFrame = ({ ratio = "1/1", ...rest }) => {
   return (
