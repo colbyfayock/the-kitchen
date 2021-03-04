@@ -23,8 +23,8 @@ const Alert = ({ id, method = 'alert', message, label }) => {
 
   return (
     <div id={id} className={styles.alert}>
-      <p id={`${id}-button`}>
-        <Button colorScheme="blue" onClick={handleOnClick}>
+      <p>
+        <Button id={`${id}-button`} colorScheme="blue" onClick={handleOnClick}>
           { label }
         </Button>
       </p>
