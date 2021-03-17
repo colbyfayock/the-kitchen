@@ -16,6 +16,8 @@ const Alert = ({ id, method = 'alert', message, label }) => {
       setAnswer(result ? 'Yes' : 'No');
     } else if ( typeof result === 'string' ) {
       setAnswer(result);
+    } else if ( result === null ) {
+      setAnswer('Cancelled')
     }
     
     setCount(count + 1)
